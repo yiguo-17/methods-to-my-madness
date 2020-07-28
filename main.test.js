@@ -27,7 +27,7 @@ describe('slice', () => {
     expect(slice('goodbye', 20)).toBe('')
   })
   
-  it(`given a third parameter as a number, returns the string from until that index, EXCLUSIVE`, () => {
+  it(`given a third parameter as a number, returns the string from the second parameter until that index, EXCLUSIVE`, () => {
     expect(slice('hello', 1, 2)).toBe('e')
     expect(slice('goodbye', 2, 5)).toBe('odb')
   })
@@ -115,14 +115,14 @@ describe('join', () => {
     expect(join(['Colin', 'Mesuara', 'Pak'])).toBe('ColinMesuaraPak');
   })
 
-  it(`given a second parameter, a string representing a "separator", returns one string with the separator placed between each initial string`, () => {
+  it(`given a second parameter, a string representing a "separator", returns one string with the separator placed between each string in the original array`, () => {
     expect(join(['Colin', 'Mesuara', 'Genghis', 'Pak'], '+')).toBe('Colin+Mesuara+Genghis+Pak');
     expect(join(['Pak', 'Mesuara', 'Genghis', 'Colin', `also isn't.`], ' is awesome and ')).toBe(`Pak is awesome and Mesuara is awesome and Genghis is awesome and Colin is awesome and also isn't.`);
   })
 });
 
 describe('split', () => {
-  it(`given only the first parameter, a string, it puts the entire string as the first element in an array`, () => {
+  it(`given only one parameter, a string, it places the entire string as the only element in an array`, () => {
     expect(split('hello')).toEqual(['hello'])
     expect(split('no goodbyes, ever')).toEqual(['no goodbyes, ever'])
   })
