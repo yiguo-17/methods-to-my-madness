@@ -8,7 +8,7 @@ Reimplement each of these array/string methods to learn how the built-in ones ac
 Each of these is a fair challenge. Take your time, return to them when you have time for another dive into it, and if you're stuck on one, try a different one!
 
 
-### Setup
+### This Is Not a Method
 
 These functions are NOT quite the same as the original. The main difference is that they're functions, not methods.
 
